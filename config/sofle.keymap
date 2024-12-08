@@ -43,7 +43,11 @@
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LEFT_GUI &kp LSHIFT &kp A>
+                = <&macro_press &kp LEFT_GUI>
+				, <&macro_press &kp LSHIFT>
+				, <&macro_tap &kp A>
+				, <&macro_release &kp LEFT_GUI>
+				, <&macro_release &kp LSHIFT>
                 ;
 		};
 	};
@@ -53,11 +57,11 @@
 
         layer0 {
             bindings = <
-&kp ESC		&kp N1			&kp N2			&kp N3			&kp N4		&kp N5	&kp UP_ARROW	&kp N6	&kp N7		&kp N8		&kp N9			&kp N0		&kp BACKSPACE
-&kp TAB		&kp Q			&kp W			&kp E			&kp R		&kp T	&kp DOWN_ARROW	&kp Y	&kp U		&kp I		&kp O			&kp P		&kp BSLH
-&kp LSHFT	&kp A			&kp S			&kp D			&kp F		&kp G	&kp LEFT_ARROW	&kp H	&kp J		&kp K		&kp L			&kp SEMI	&kp APOS
-&kp LCTRL	&kp Z			&kp X			&kp C			&kp V		&kp B	&kp RIGHT_ARROW	&kp N	&kp M		&kp COMMA	&kp DOT			&kp FSLH	&kp ENTER
-&kp C_MUTE	&mt LCTRL CAPS	&kp LEFT_GUI	&kp LEFT_ALT	&kp SPACE	&mo 1	&kp ENTER		&mo 2	&kp SPACE	&kp RALT	&kp RIGHT_SHIFT	&kp DELETE
+&kp ESC		&kp N1			&kp N2			&kp N3			&kp N4		&kp N5	&kp UP_ARROW	&kp N6	&kp N7		&kp N8		&kp N9		&kp N0		&kp BACKSPACE
+&kp TAB		&kp Q			&kp W			&kp E			&kp R		&kp T	&kp DOWN_ARROW	&kp Y	&kp U		&kp I		&kp O		&kp P		&kp BSLH
+&kp LSHIFT	&kp A			&kp S			&kp D			&kp F		&kp G	&kp LEFT_ARROW	&kp H	&kp J		&kp K		&kp L		&kp SEMI	&kp APOS
+&kp LCTRL	&kp Z			&kp X			&kp C			&kp V		&kp B	&kp RIGHT_ARROW	&kp N	&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp ENTER
+&kp C_MUTE	&mt LCTRL CAPS	&kp LEFT_GUI	&kp LEFT_ALT	&kp SPACE	&mo 1	&kp ENTER		&mo 2	&kp SPACE	&kp RALT	&kp RSHIFT	&kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -67,9 +71,9 @@
         layer_1 {
             bindings = <
 &trans			&kp F1		&kp F2		&kp F3		&kp F4			&kp F5			&mmv MOVE_UP	&kp F6			&trans			&trans		&kp MINUS			&kp EQUAL			&trans
-&kp GRAVE		&kp F7		&kp F8		&kp F9		&kp F10			&kp F11			&mmv MOVE_DOWN	&kp F12			&kp HOME		&kp UP		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp HOME
-&trans			&mkp LCLK	&mkp MCLK	&mkp RCLK	&mkp MB4		&mkp MB5		&mmv MOVE_LEFT	&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT			&trans				&kp END
-&powertoys_mute	&trans		&trans		&trans		&trans			&trans			&mmv MOVE_RIGHT	&trans			&trans			&kp INSERT	&trans				&trans				&kp PRINTSCREEN
+&kp GRAVE		&kp F7		&kp F8		&kp F9		&kp F10			&kp F11			&mmv MOVE_DOWN	&kp F12			&trans			&kp UP		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp HOME
+&trans			&mkp LCLK	&mkp MCLK	&mkp RCLK	&mkp MB4		&mkp MB5		&mmv MOVE_LEFT	&kp HOME		&kp LEFT		&kp DOWN	&kp RIGHT			&trans				&kp END
+&powertoys_mute	&trans		&trans		&trans		&trans			&trans			&mmv MOVE_RIGHT	&kp END			&trans			&kp INSERT	&trans				&trans				&kp PRINTSCREEN
 &trans			&trans		&trans		&trans		&trans			&trans			&mkp LCLK		&trans			&kp ENTER		&trans		&trans				&trans
             >;
 
@@ -79,7 +83,7 @@
 
         layer_2 {
             bindings = <
-&trans		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&mmv MOVE_UP	&trans	&trans		&trans				&kp MINUS	&kp PLUS	&trans
+&trans		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&mmv MOVE_UP	&trans	&trans		&trans				&kp UNDER	&kp PLUS	&trans
 &kp TILDE	&bt BT_CLR		&bt BT_CLR_ALL	&rgb_ug RGB_HUI	&rgb_ug RGB_SAI	&rgb_ug RGB_SPI	&mmv MOVE_DOWN	&trans	&trans		&trans				&kp LBRC	&kp RBRC	&kp PG_UP
 &trans		&out OUT_USB	&out OUT_BLE	&rgb_ug	RGB_HUD	&rgb_ug RGB_SAD	&rgb_ug RGB_SPD	&mmv MOVE_LEFT	&trans	&kp C_PREV	&kp C_PLAY_PAUSE	&kp C_NEXT	&trans		&kp PG_DN
 &trans		&sys_reset		&soft_off		&bootloader		&rgb_ug RGB_BRI	&rgb_ug RGB_EFF	&mmv MOVE_RIGHT	&trans	&trans		&trans				&trans		&trans		&trans
