@@ -68,7 +68,7 @@
             bindings = <
 &trans			&kp F1		&kp F2		&kp F3		&kp F4			&kp F5			&mmv MOVE_UP	&kp F6			&trans			&trans		&kp MINUS			&kp EQUAL			&trans
 &kp GRAVE		&kp F7		&kp F8		&kp F9		&kp F10			&kp F11			&mmv MOVE_DOWN	&kp F12			&kp HOME		&kp UP		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp HOME
-&trans			&mkp LCKL	&mkp MCLK	&mkp RCLK	&mkp MB4		&mkp MB5		&mmv MOVE_LEFT	&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT			&trans				&kp END
+&trans			&mkp LCLK	&mkp MCLK	&mkp RCLK	&mkp MB4		&mkp MB5		&mmv MOVE_LEFT	&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT			&trans				&kp END
 &powertoys_mute	&trans		&trans		&trans		&trans			&trans			&mmv MOVE_RIGHT	&trans			&trans			&kp INSERT	&trans				&trans				&kp PRINTSCREEN
 &trans			&trans		&trans		&trans		&trans			&trans			&mkp LCLK		&trans			&ENTER			&trans		&trans				&trans
             >;
